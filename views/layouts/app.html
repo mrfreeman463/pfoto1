@@ -4,29 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }}</title>
+    <title>Document</title>
 
-    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
 </head>
 <body>
-
-    {% include 'layouts/header.html' %}
-
-    <div class="container-fluid main_container p-0">
-        <div class="sidebar_container pb-4">
-            {% include 'layouts/sidebar.html' %}
-        </div>
-
-        <div class="content_container pb-3">
-            {% block content %} {% endblock %}
-
-            {% include 'layouts/footer.html' %}
-        </div>
-    </div>
-
-    <script src="/static/js/bootstrap.bundle.min.js"></script>
-    {# // <script src="/static/js/bootstrap.min.js"></script> #}
-    {# // <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script> #}
+    
 </body>
 </html>
+
+
+{% include 'layouts/header.html' %}
+
+{% include 'layouts/sidebar.html' %}
+
+{% block content %} {% endblock %}
+
+{% include 'layouts/footer.html' %}
