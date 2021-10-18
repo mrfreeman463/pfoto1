@@ -20,16 +20,10 @@ $app = AppFactory::create();
 $twig = Twig::create(__DIR__ . "/views", ['cache' => false]);
 $app->add(TwigMiddleware::create($app, $twig));
 
-// $app->addErrorMidlleware(true, true, true);
-// $app->add(new DefaultMiddleware());
-
 $app->get('/', [Controllers\MainController::class, 'home']);
 
-$app->get('/tmp', function(Request $request, Response $response, $args) {
-    $rpArray = json_encode(['title' => 'TmpPage'], JSON_PRETTY_PRINT);
-    $response->getBody()->write($rpArray);
+$app->get('/user/create', [Controllers\UsersController::class, 'create']);
 
-    return $response->withHeader('Content-Type', 'application/json');
-})->add(new DefaultMiddleware());
+$app->get('/auth/login', [Controllers\AuthControllers::class, 'show_login_form']); // ->add(new AuthMiddleware());
 
 $app->run();

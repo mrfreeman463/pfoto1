@@ -11,17 +11,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/jquery.galereya.css">
 </head>
 <body>
-    
+    {% include 'layouts/header.html' %}
+
+    {% include 'layouts/sidebar.html' %}
+
+    {% block content %} {% endblock %}
+
+    {# {% include 'layouts/pagination.html' %} #}
+
+    {# {% include 'layouts/footer.html' %} #}
+
+    <script src="/static/js/jquery.js"></script>
+    <script src="/static/js/jquery.galereya.js"></script>
+    <script type="text/javascript">
+        $('#gallery').galereya({
+            wave: false,
+            cellFadeInSpeed: 100,
+            slideShowSpeed: 3000
+        });
+    </script>
 </body>
 </html>
-
-
-{% include 'layouts/header.html' %}
-
-{% include 'layouts/sidebar.html' %}
-
-{% block content %} {% endblock %}
-
-{% include 'layouts/footer.html' %}

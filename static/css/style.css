@@ -4,6 +4,10 @@
     color: #FFF;
 }
 
+ul, ol, li {
+    display: block;
+}
+
 body {
     background-color: #030303;
     font-family: 'Montserrat', sans-serif;
@@ -48,4 +52,100 @@ header .container_header_menu ul li a:hover {
     transition: all 0.5s ease;
 }
 
-header .container_header_search {}
+header .container_header_search {
+    margin-left: auto;
+    width: 70%;
+}
+
+header .container_header_search form {
+    display: grid;
+    grid-template-columns: 11fr 1fr;
+    grid-column-gap: .2rem;
+}
+
+header .container_header_search input, header .container_header_search button {
+    border-radius: 1px;
+}
+
+header .container_header_search input {
+    color: #9b9b9b;
+    height: 30px;
+    width: 100%;
+    border: none;
+    margin-left: -.5rem;
+    padding-left: .5rem;
+}
+
+header .container_header_search input:focus {
+    outline: unset;
+}
+
+header .container_header_search button {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #FFF;
+    background-color: unset;
+}
+
+header .container_header_search button:hover {
+    cursor: pointer;
+    background-color: #FFF;
+    color: #030303;
+}
+
+/* Content container */
+
+
+/* Pagination container */
+section.pagination .container {
+    padding: 1rem;
+}
+
+section.pagination .container ul {
+    display: flex;
+}
+
+section.pagination .container ul li {
+    margin-right: .5rem;
+}
+
+section.pagination .container ul li a {
+    padding: 1rem;
+    text-decoration: none;
+    background-color: #9B1003;
+}
+
+section.pagination .container ul li.active a {
+    background-color: #600800;
+}
+
+section.pagination .container ul li a:hover {
+    text-decoration: underline;
+    background-color: #600800;
+}
+
+/* Footer styles */
+footer .container {
+    margin-top: 1rem;
+    border-top: 1px solid #600800;
+    padding: 1rem;
+    font-size: 12px;
+}
+
+footer .container .footer_item {
+    margin-bottom: .5rem;
+}
+
+footer .container .footer_item:last-child {
+    margin-bottom: unset;
+}
+
+footer .container .footer_item .footer_main_header {
+    font-weight: bold;
+}
+
+footer .container .footer_item .footer_header {
+    font-weight: bold;
+}
+
+footer .container .footer_item .footer_text_content {}

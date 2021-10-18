@@ -9,12 +9,15 @@
     "require": {
         "slim/slim": "4.*",
         "slim/psr7": "^1.5",
-        "slim/twig-view": "^3.2"
+        "slim/twig-view": "^3.2",
+        "illuminate/database": "~5.1"
     },
     "autoload": {
         "psr-4": {
             "Middleware\\": "middleware/",
-            "Controllers\\": "controllers/"
+            "Controllers\\": "controllers/",
+            "Models\\": "models/",
+            "Config\\": "config/"
         }
     }
 }

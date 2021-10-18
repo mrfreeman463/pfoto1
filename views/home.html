@@ -1,5 +1,17 @@
 {% extends "layouts/app.html" %}
 
 {% block content %}
-    ​Here is the content block 
+    <section class="content">
+        <div class="container" id="gallery">
+            {% for key, img in picLinks %}  
+                <img src="{{ img }}" 
+                    alt="Title here" 
+                    title="Or here(more priority)" 
+                    data-desc="some description" 
+                    data-category="image category here" 
+                    data-fullsrc="{{ img }}"
+                >
+            {% endfor %}
+        </div>
+    </section>
 {% endblock %}
